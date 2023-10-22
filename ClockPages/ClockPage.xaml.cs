@@ -7,6 +7,7 @@ public partial class ClockPage : ContentPage
 
     int x = 0;
     CancellationTokenSource cancellationTokenSource;
+   
 
 
     public ClockPage()
@@ -14,6 +15,7 @@ public partial class ClockPage : ContentPage
         InitializeComponent();
         timePicker.Time = DateTime.Now.TimeOfDay;
     }
+
 
     private void timePicker_PropertyChanged(object sender, PropertyChangedEventArgs e)
     {
@@ -29,12 +31,20 @@ public partial class ClockPage : ContentPage
         }
     }
 
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
 
+        cancellationTokenSource = new CancellationTokenSource();
+        UpdateTimePickerPeriodically(cancellationTokenSource.Token);
+    }
+
+    [Obsolete]
     private async Task UpdateTimePickerPeriodically(CancellationToken cancellationToken)
     {   
         while (!cancellationToken.IsCancellationRequested)
         {
-            await Task.Delay(1000, cancellationToken); // ∆дем 1 минуту
+            await Task.Delay(60000, cancellationToken); // ∆дем 1 минуту
 
             Device.BeginInvokeOnMainThread(() =>
             {

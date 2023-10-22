@@ -3,7 +3,11 @@
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="ClockPage">
     <VerticalStackLayout>
-        <TimePicker x:Name="timePicker" Time="{Binding InitialTime, Mode=TwoWay}" PropertyChanged="timePicker_PropertyChanged" />
+        <TimePicker x:Name="timePicker" PropertyChanged="timePicker_PropertyChanged" />
+        <Label FontSize="37" HorizontalOptions="Center"
+               Text="{Binding Time, Source={x:Reference timePicker}}"
+               VerticalOptions="Center" />
 
     </VerticalStackLayout>
 </ContentPage>
+<!--, StringFormat={}{0:hh}:{0:mm}-->

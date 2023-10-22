@@ -9,6 +9,12 @@
             <ShellContent Title="Часы"
                           ContentTemplate="{DataTemplate local:ClockPage}"
                           Route="ClockPage" />
+            <ShellContent Title="Секундомер"
+                          ContentTemplate="{DataTemplate local:StopWatchPage}"
+                          Route="StopWatchPage" />
+            <ShellContent Title="Таймер"
+                          ContentTemplate="{DataTemplate local:TimerPage}"
+                          Route="TimerPage" />
 
         </Tab>
     </TabBar>

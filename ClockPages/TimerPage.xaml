@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="DataAndTimePract.ClockPages.TimerPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="TimerPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <TimePicker x:Name="timePicker" Format="hh:mm:ss" />
+        <Button x:Name="startButton"
+                Clicked="StartButton_Clicked" Text="Старт" />
+        <Label x:Name="timerLabel"
+               FontSize="36" HorizontalOptions="Center" Text="00:00:00"  />
+    </StackLayout>
+
+</ContentPage>

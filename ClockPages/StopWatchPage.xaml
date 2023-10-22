@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="DataAndTimePract.ClockPages.StopWatchPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="StopWatchPage">
+    <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+        <Label x:Name="label"
+               FontSize="37" HeightRequest="50" HorizontalOptions="Center"
+               Text="00:00" VerticalOptions="Center" />
+        <Button Clicked="btnStartStop_Clicked" Text="Старт/Стоп" VerticalOptions="Center" />
+        <Button x:Name="btnReset"
+                Clicked="btnReset_Clicked" IsEnabled="False" Text="Сбросить"
+                VerticalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
