@@ -15,7 +15,13 @@
             <ShellContent Title="Таймер"
                           ContentTemplate="{DataTemplate local:TimerPage}"
                           Route="TimerPage" />
-
+            <ShellContent Title="Будильник"
+                          ContentTemplate="{DataTemplate local:AlarmClockPage}"
+                          Route="AlarmClockPage" />
+            <ShellContent Title="Напоминалка"
+                          ContentTemplate="{DataTemplate local:Reminder}"
+                          Route="Reminder" />
+            
         </Tab>
     </TabBar>
 

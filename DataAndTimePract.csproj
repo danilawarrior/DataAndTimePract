@@ -53,7 +53,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ClockPages\ClockPage.xaml">
+	  <MauiXaml Update="ClockPages\AlarmClockPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ClockPages\Reminder.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ClockPages\StopWatchPage.xaml">

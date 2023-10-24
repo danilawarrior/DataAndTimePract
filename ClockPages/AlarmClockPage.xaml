@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="DataAndTimePract.ClockPages.AlarmClockPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="AlarmClockPage">
+    <StackLayout>
+        <Label Text="Установите время будильника:" />
+        <TimePicker x:Name="timePicker" />
+        <Label Text="Включить/Выключить будильник:" />
+        <Switch x:Name="alarmSwitch" Toggled="OnSwitchToggled" />
+    </StackLayout>
+</ContentPage>

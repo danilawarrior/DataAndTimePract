@@ -2,12 +2,10 @@
 <ContentPage x:Class="DataAndTimePract.ClockPages.ClockPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="ClockPage">
-    <VerticalStackLayout>
-        <TimePicker x:Name="timePicker" PropertyChanged="timePicker_PropertyChanged" />
-        <Label FontSize="37" HorizontalOptions="Center"
-               Text="{Binding Time, Source={x:Reference timePicker}}"
-               VerticalOptions="Center" />
-
-    </VerticalStackLayout>
+    <StackLayout>
+        <TimePicker x:Name="timePicker"
+                    FontSize="50" HorizontalOptions="Center" PropertyChanged="timePicker_PropertyChanged"
+                    VerticalOptions="CenterAndExpand" />
+    </StackLayout>
 </ContentPage>
-<!--, StringFormat={}{0:hh}:{0:mm}-->
+<!--  , StringFormat={}{0:hh}:{0:mm}  -->

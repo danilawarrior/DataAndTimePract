@@ -14,7 +14,7 @@ public partial class TimerPage : ContentPage
     {
         if (!isRunning)
         {
-            // Получите выбранное время от TimePicker
+           
             var selectedTime = timePicker.Time;
 
             if (selectedTime.TotalSeconds > 0)
@@ -32,7 +32,10 @@ public partial class TimerPage : ContentPage
 
                 isRunning = false;
                 startButton.Text = "Старт";
-                timerLabel.Text = "Время истекло!";
+                if (remainingTime.TotalSeconds == 0)
+                {
+                    timerLabel.Text = "Время истекло!";
+                }
             }
         }
         else
